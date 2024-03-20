@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Aspose.Font for JavaScript via C++</title>
+  <style>
+    body{font-family:Arial}
+    .tab,.tabcontent{border:1px solid #ccc}.tab{overflow:hidden;background-color:#2871e6}.tab button{background-color:inherit;float:left;border:none;outline:0;cursor:pointer;padding:14px 16px;transition:.3s;font-size:17px}.tab button:hover{background-color:#1e90ff;color:#b0c4de}.tab button.active{background-color:#191970;color:#fff;font-weight:700}.tabcontent{display:none;padding:6px 12px;border-top:none}
+    label{display:inline-block;width:180px;text-align:right;padding-top:10px;cursor:pointer;text-decoration:underline}.tooltip{visibility:hidden;width:240px;background-color:navy;color:#fff;text-align:center;border-radius:6px;padding:5px 0;position:absolute;z-index:1}label:hover{color:#0075b2;font-weight:700}label:hover .tooltip{visibility:visible}
+    input[type=file]{width:250px}.column{float:left;width:450px}.row:after{content:"";display:table;clear:both}
+  </style>
+</head>
+
+<body>
+  <h2>Aspose.Font for JavaScript via C++</h2>
+
+  <div class="tab">
+    <button class="tablinks" onclick="openCategory(event, 'Convert')" id="defaultOpen">Convert font to True Type</button>
+    <button class="tablinks" onclick="openCategory(event, 'Metadata')">Font Metadata</button>
+  </div>
+
+  <div id="Convert" class="tabcontent" style="background-color:#F0F8FF;border-bottom-left-radius:4px;border-bottom-right-radius:4px">
+    <div class="row">
+
+      <div class="column">
+	    <div class="row">
+    	  <label for="TTF2WOFF">TTF to WOFF<span class="tooltip">Convert a TTF font to WOFF</span></label>
+          <input type="file" id="TTF2WOFF" accept=".ttf" onchange="fTTF2WOFF(event)">
+        </div>
+        <div class="row">
+          <label for="TTF2WOFF2">TTF to WOFF2<span class="tooltip">Convert a TTF font to WOFF2</span></label>
+          <input type="file" id="TTF2WOFF2" accept=".ttf" onchange="fTTF2WOFF2(event)">
+        </div>
+        <div class="row">
+          <label for="TTF2SVG">TTF to SVG<span class="tooltip">Convert a TTF font to SVG</span></label>
+          <input type="file" id="TTF2SVG" accept=".ttf" onchange="fTTF2SVG(event)">
+        </div>
+      </div>
+
+      <div class="column">
+	    <div class="row">
+          <label for="WOFF2TTF">WOFF to TTF<span class="tooltip">Convert a WOFF font to TTF</span></label>
+          <input type="file" id="WOFF2TTF" accept=".woff" onchange="fWOFF2TTF(event)">
+        </div>
+	    <div class="row">
+          <label for="WOFF2WOFF2">WOFF to WOFF2<span class="tooltip">Convert a WOFF font to WOFF2</span></label>
+          <input type="file" id="WOFF2WOFF2" accept=".woff" onchange="fWOFF2WOFF2(event)">
+        </div>
+	    <div class="row">
+          <label for="WOFF2SVG">WOFF to SVG<span class="tooltip">Convert a WOFF font to SVG</span></label>
+          <input type="file" id="WOFF2SVG" accept=".woff" onchange="fWOFF2SVG(event)">
+        </div>
+      </div>
+
+      <div class="column">
+	    <div class="row">
+          <label for="WOFF22TTF">WOFF2 to TTF<span class="tooltip">Convert a WOFF2 font to TTF</span></label>
+          <input type="file" id="WOFF2TTF" accept=".woff2" onchange="fWOFF22TTF(event)">
+        </div>
+	    <div class="row">
+          <label for="WOFF22WOFF">WOFF2 to WOFF<span class="tooltip">Convert a WOFF2 font to WOFF</span></label>
+          <input type="file" id="WOFF22WOFF" accept=".woff2" onchange="fWOFF22WOFF(event)">
+        </div>
+	    <div class="row">
+          <label for="WOFF22SVG">WOFF2 to SVG<span class="tooltip">Convert a WOFF2 font to SVG</span></label>
+          <input type="file" id="WOFF2SVG" accept=".woff2" onchange="fWOFF22SVG(event)">
+        </div>
+      </div>
+
+      <div class="column">
+	    <div class="row">
+          <label for="Type12TTF">Type1 to TTF<span class="tooltip">Convert a Type1 font to TTF</span></label>
+          <input type="file" id="Type12TTF" accept=".Type1,.pfa,.pfb" onchange="fType12TTF(event)">
+        </div>
+	    <div class="row">
+          <label for="Type12WOFF">Type1 to WOFF<span class="tooltip">Convert a Type1 font to WOFF</span></label>
+          <input type="file" id="TTF2WOFF" accept=".Type1,.pfa,.pfb" onchange="fType12WOFF(event)">
+        </div>
+	    <div class="row">
+          <label for="Type12WOFF2">Type1 to WOFF2<span class="tooltip">Convert a Type1 font to WOFF2</span></label>
+          <input type="file" id="TTF2WOFF" accept=".Type1,.pfa,.pfb" onchange="fType12WOFF2(event)">
+        </div>
+	    <div class="row">
+          <label for="Type12SVG">Type1 to SVG<span class="tooltip">Convert a Type1 font to SVG</span></label>
+          <input type="file" id="Type12WOFF" accept=".Type1,.pfa,.pfb" onchange="fType12SVG(event)">
+        </div>
+      </div>
+
+      <div class="column">
+	    <div class="row">
+          <label for="PFA2TTF">PFA to TTF<span class="tooltip">Convert a PFA font to TTF</span></label>
+          <input type="file" id="PFA2TTF" accept=".PFA" onchange="fPFA2TTF(event)">
+        </div>
+	    <div class="row">
+          <label for="PFA2WOFF">PFA to WOFF<span class="tooltip">Convert a PFA font to WOFF</span></label>
+          <input type="file" id="TTF2WOFF" accept=".PFA" onchange="fPFA2WOFF(event)">
+        </div>
+	    <div class="row">
+          <label for="PFA2WOFF2">PFA to WOFF2<span class="tooltip">Convert a PFA font to WOFF2</span></label>
+          <input type="file" id="TTF2WOFF2" accept=".PFA" onchange="fPFA2WOFF2(event)">
+        </div>
+	    <div class="row">
+          <label for="PFA2SVG">PFA to SVG<span class="tooltip">Convert a PFA font to SVG</span></label>
+          <input type="file" id="PFA2SVG" accept=".PFA" onchange="fPFA2SVG(event)">
+        </div>
+      </div>
+
+      <div class="column">
+	    <div class="row">
+          <label for="PFB2TTF">PFB to TTF<span class="tooltip">Convert a PFB font to TTF</span></label>
+          <input type="file" id="PFB2TTF" accept=".PFB" onchange="fPFB2TTF(event)">
+        </div>
+	    <div class="row">
+          <label for="PFB2WOFF">PFB to WOFF<span class="tooltip">Convert a PFB font to WOFF</span></label>
+          <input type="file" id="TTF2WOFF" accept=".PFB" onchange="fPFB2WOFF(event)">
+        </div>
+	    <div class="row">
+          <label for="PFB2WOFF2">PFB to WOFF2<span class="tooltip">Convert a PFB font to WOFF2</span></label>
+          <input type="file" id="TTF2WOFF2" accept=".PFB" onchange="fPFB2WOFF2(event)">
+        </div>
+	    <div class="row">
+          <label for="PFB2SVG">PFB to SVG<span class="tooltip">Convert a PFB font to SVG</span></label>
+          <input type="file" id="PFB2SVG" accept=".PFB" onchange="fPFB2SVG(event)">
+        </div>
+      </div>
+
+      <div class="column">
+	    <div class="row">
+          <label for="CFF2TTF">CFF to TTF<span class="tooltip">Convert a CFF font to TTF</span></label>
+          <input type="file" id="CFF2TTF" accept=".CFF" onchange="fCFF2TTF(event)">
+        </div>
+	    <div class="row">
+          <label for="CFF2WOFF">CFF to WOFF<span class="tooltip">Convert a CFF font to WOFF</span></label>
+          <input type="file" id="TTF2WOFF" accept=".CFF" onchange="fCFF2WOFF(event)">
+        </div>
+	    <div class="row">
+          <label for="CFF2WOFF2">CFF to WOFF2<span class="tooltip">Convert a CFF font to WOFF2</span></label>
+          <input type="file" id="TTF2WOFF2" accept=".CFF" onchange="fCFF2WOFF2(event)">
+        </div>
+	    <div class="row">
+          <label for="CFF2SVG">CFF to SVG<span class="tooltip">Convert a CFF font to SVG</span></label>
+          <input type="file" id="CFF2SVG" accept=".CFF" onchange="fCFF2SVG(event)">
+        </div>
+      </div>
+
+      <div class="column">
+	    <div class="row">
+          <label for="EOT2TTF">EOT to TTF<span class="tooltip">Convert a EOT font to TTF</span></label>
+          <input type="file" id="EOT2TTF" accept=".EOT" onchange="fEOT2TTF(event)">
+        </div>
+	    <div class="row">
+          <label for="EOT2WOFF">EOT to WOFF<span class="tooltip">Convert a EOT font to WOFF</span></label>
+          <input type="file" id="TTF2WOFF" accept=".EOT" onchange="fEOT2WOFF(event)">
+        </div>
+	    <div class="row">
+          <label for="EOT2WOFF2">EOT to WOFF2<span class="tooltip">Convert a EOT font to WOFF2</span></label>
+          <input type="file" id="TTF2WOFF" accept=".EOT" onchange="fEOT2WOFF2(event)">
+        </div>
+	    <div class="row">
+          <label for="EOT2SVG">EOT to SVG<span class="tooltip">Convert a EOT font to SVG</span></label>
+          <input type="file" id="EOT2WOFF" accept=".EOT" onchange="fEOT2SVG(event)">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="Organize" class="tabcontent" style="background-color:#F0F8FF;border-bottom-left-radius:4px;border-bottom-right-radius:4px">
+    <div class="row">
+    </div>
+  </div>
+
+  <div id="Metadata" class="tabcontent" style="background-color:#F0F8FF;border-bottom-left-radius:4px;border-bottom-right-radius:4px">
+    <div class="row">
+      <div class="column">
+        <label for="fileFontGetInfo">GET INFO<span class="tooltip">Get info (metadata) from a font</span></label>
+        <input type="file" id="fileFontGetInfo" accept="application/font" onchange="ffileFontGetInfo(event)">
+      </div>
+    </div>
+    <div class="row">
+        <label for="fileFontSetInfo">SET INFO<span class="tooltip">Set info (metadata) to a font</span></label>
+        <input type="file" id="fileFontGetInfo" accept="application/font" onchange="ffileFontSetInfo(event)">
+        <label style="color:blue" for="selectNameId">Select NameId: </label>
+          <select id="NameId" value="FontFamily">
+          <option value="FontFamily">FontFamily</option>
+          <option value="Description">Description</option>
+          <option value="CopyrightNotice">CopyrightNotice</option>
+          </select>
+        <input type="text" id="textValue">
+        <button id="AddButton" onclick="fFontSetInfo(event)">Add</button>
+        <button id="DeleteButton" onclick="fFontDeleteInfo(event)" disabled>Delete</button>
+    </div>
+  </div>
+
+  <pre id="output" style="width:100%;background-color:#F5F5F5;border-radius:4px"></pre>
+
+</body>
+
+<script type="text/javascript" async src="AsposeFontforJS.js" onload="onloadAsposeFontforJS();"></script>
+<script type="text/javascript">
+  var blob,name;
+
+  var onloadAsposeFontforJS = function () {
+    var Module_onRuntimeInitialized = Module['onRuntimeInitialized'];
+    Module['onRuntimeInitialized'] = async function() {
+        console.log('AsposeFontforJS has loaded');
+        await Module_onRuntimeInitialized();
+        //Get info about Product
+        const json = AsposeFontAbout();
+        if (json.errorCode == 0) document.getElementById('output').textContent = "Product      : " + json.product
+                                                                             + "\nVersion      : " + json.version
+                                                                             + "\nIs licensed  : " + json.islicensed;
+        else document.getElementById('output').textContent = json.errorText;
+    }
+  }
+
+  var fTTF2WOFF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "woff");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fTTF2WOFF2 = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.WOFF2);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "woff2");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fTTF2SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "svg");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fWOFF2TTF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.TTF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "ttf");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fWOFF2WOFF2 = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.WOFF2);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "woff2");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fWOFF2SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "svg");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fWOFF22TTF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.TTF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "ttf");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fWOFF22WOFF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "woff");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fWOFF22SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.TTF, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult, "svg");
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fType12TTF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.TTF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fType12WOFF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fType12WOFF2 = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.WOFF2);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fType12SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFA2TTF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.TTF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFA2WOFF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFA2WOFF2 = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.WOFF2);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFA2SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFB2TTF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.TTF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFB2WOFF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFB2WOFF2 = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.WOFF2);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fPFB2SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.Type1, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fCFF2TTF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.CFF, Module.FontSavingFormats.TTF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fCFF2WOFF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.CFF, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fCFF2WOFF2 = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.CFF, Module.FontSavingFormats.WOFF2);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fCFF2SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.CFF, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fOTF2TTF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.OTF, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fOTF2WOFF = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.OTF, Module.FontSavingFormats.WOFF);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fOTF2WOFF2 = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.OTF, Module.FontSavingFormats.WOFF2);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fOTF2SVG = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontConvert(event.target.result, e.target.files[0].name, Module.FontType.OTF, Module.FontSavingFormats.SVG);
+      if (json.errorCode == 0) document.getElementById('output').textContent = json.fileNameResult;
+      else document.getElementById('output').textContent = json.errorText;
+      DownloadFile(json.fileNameResult);
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var ffileFontGetInfo = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontGetInfo(event.target.result, e.target.files[0].name);
+      if (json.errorCode == 0) {
+        document.getElementById('output').textContent = "Name records count: " + json.records.length;
+        for (let recordIndex = 0; recordIndex < json.records.length; recordIndex++) 
+			document.getElementById('output').textContent += " " + "\n"
+													     + "NameId : " + json.records[recordIndex].NameId
+                                                         + ";  PlatformId : " + json.records[recordIndex].PlatformId
+                                                         + ";  PlatformSpecificId : " + json.records[recordIndex].PlatformSpecificId
+                                                         + ";  LanguageId : " + json.records[recordIndex].LanguageId
+                                                         + ";  Info : " + json.records[recordIndex].Info;
+      }
+      else document.getElementById('output').textContent = json.errorText;
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var ffileFontSetInfo = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      blob = event.target.result;
+      file= e.target.files[0];
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+
+  var fFontSetInfo = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+
+      const nameId = new Function("return Module.TtfNameTableNameId." + document.getElementById("NameId").value)();
+      const platformId = Module.TtfNameTablePlatformId.Microsoft;
+      const platformSpecificId = Module.TtfNameTableMSPlatformSpecificId.Unicode_BMP_UCS2.value;
+      const text = document.getElementById("textValue").value;
+      const langID = 1033;
+
+      const json = AsposeFontSetInfo(blob, file.name, nameId, platformId, platformSpecificId, langID, text);
+      if (json.errorCode == 0) {
+        DownloadFile(json.fileNameResult);
+        //DownloadFile(file.name);
+      }
+      else document.getElementById('output').textContent = json.errorText;
+    }
+    file_reader.readAsArrayBuffer(file);
+  }
+
+</script>
+
+<script>
+  const inputOnChange = function () {
+    Array.from(document.body.getElementsByTagName('a')).forEach(a => {a.remove();});
+    Array.from(document.body.getElementsByTagName('br')).forEach(br => {br.remove();});
+  }
+  Array.from(document.body.getElementsByTagName('input')).forEach(element => {element.addEventListener("input", inputOnChange);});
+</script>
+
+<script>
+  function openCategory(evt, categoryName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(categoryName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  document.getElementById("defaultOpen").click();
+</script>
+
+</html>
