@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Aspose.Font for JavaScript via C++</title>
+</head>
+
+<body>
+  <label for="fileConvert">Choose a ttf font to get metadata information</label>
+  <input type="file" id="fileConvert" accept=".ttf" onchange="ffileFontGetInfo(event)">
+  <br>
+  <pre id="output"></pre>
+</body>
+<!-- Load and initiate Aspose.Font for JavaScript via C++ -->
+<script type="text/javascript" async src="AsposeFontforJS.js"></script>
+<script type="text/javascript">
+/// [Code snippet]
+  var ffileFontGetInfo = function (e) {
+    const file_reader = new FileReader();
+    file_reader.onload = (event) => {
+      const json = AsposeFontGetInfo(event.target.result, e.target.files[0].name);
+      if (json.errorCode == 0) {
+        document.getElementById('output').textContent = "Name records count: " + json.records.length;
+        for (let recordIndex = 0; recordIndex < json.records.length; recordIndex++) 
+			document.getElementById('output').textContent += " " + "\n"
+													     + "NameId : " + json.records[recordIndex].NameId
+                                                         + ";  PlatformId : " + json.records[recordIndex].PlatformId
+                                                         + ";  PlatformSpecificId : " + json.records[recordIndex].PlatformSpecificId
+                                                         + ";  LanguageId : " + json.records[recordIndex].LanguageId
+                                                         + ";  Info : " + json.records[recordIndex].Info;
+      }
+      else document.getElementById('output').textContent = json.errorText;
+    }
+    file_reader.readAsArrayBuffer(e.target.files[0]);
+  }
+/// [Code snippet]
+</script>
+
+</html>
